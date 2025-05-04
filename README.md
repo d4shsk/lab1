@@ -21,7 +21,7 @@ int main() {
 	int num1, num2, sum;
 
 	printf("1.2 \nEnter number 1: ");
-	scanf("&d", &num1);
+	scanf("%d", &num1);
 
 	while (getchar() != '\n');
 
@@ -32,3 +32,6 @@ int main() {
 	printf("Sum = %d\n", sum);
 }
 ```
+Результат выполненной работы:
+<img src="imgs/1-2.jpg">
+## 1.3  
