@@ -263,6 +263,7 @@ int main() {
 		p1 = p2;
 		p2 = current;
 	}
+	printf("\n");
 }
 ```
 <img src="imgs/2-3.jpg">  
