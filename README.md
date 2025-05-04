@@ -267,3 +267,48 @@ int main() {
 }
 ```
 <img src="imgs/2-3.jpg">  
+
+## 2.4  
+Задача: С клавиатуры вводится трёхзначное число, считается сумма его цифр.
+Если сумма цифр числа больше 10, то вводится следующее трёхзначное число, если сумма меньше либо равна 10 — программа завершается.  
+Математическая модель:  
+d1 = number/100  
+d2 = (number / 10) % 10  
+d3 = number % 10  
+Список идентификаторов:  
+| Имя  | Тип | Смысл |
+| --- | --- | --- |
+| number  | int  |  число |
+| sum  | int  |  сумма |
+| digit1  | int  |  первая цифра |  
+| digit2  | int  |  вторая цифра |  
+| digit3  | int  |  третья цифра |  
+  
+Код программы:  
+```C
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	printf("2.4 \n");
+	int number, sum;
+	do {
+		printf("Enter a three-digit number: ");
+		scanf("%d", &number);
+		if (number < 100 || number > 999) {
+			printf("Number must contain 3 digits\n");
+			continue;
+		}
+		int digit1 = number / 100;
+		int digit2 = (number / 10) % 10;
+		int digit3 = number % 10;
+		sum = digit1 + digit2 + digit3;
+		printf("Sum: %d\n", sum);
+		if (sum <= 10) {
+			printf("Sum <= 10\n");
+			break;
+		}
+	} while (1);
+}
+```
+<img src="imgs/2-4.jpg">  
