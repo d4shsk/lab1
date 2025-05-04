@@ -26,4 +26,5 @@ int main() {
 		p1 = p2;
 		p2 = current;
 	}
+	printf("\n");
 }
