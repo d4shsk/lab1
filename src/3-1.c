@@ -20,4 +20,5 @@ int main() {
 		printf("%d \t", y);
 	}
 	printf("\n");
+	return 0;
 }

@@ -19,4 +19,5 @@ int main() {
 	printf("2. %lf \n", calculate_h(x, a, b, c));
 	a = 0.27, b = 3.9, c = 2.8, x = 1.8;
 	printf("3. %lf \n", calculate_h(x, a, b, c));
+	return 0;
 }

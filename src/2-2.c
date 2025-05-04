@@ -20,11 +20,12 @@ int main() {
 	printf("2.2 \n");
 	double a = 0.0;
 	double b = 1.0;
-	int n = 1000; // количество трапеций 
+	int n = 1000; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
 
 	double integral = trapezoidal_integral(a, b, n);
 	double exact = exp(b) - exp(a);
 
 	printf("Calculated integral: %.8f\n", integral);
 	printf("Analyzed integral : %.8f\n", exact);
+	return 0;
 }
