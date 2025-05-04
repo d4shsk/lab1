@@ -128,10 +128,15 @@ int main() {
 заданный момент времени внутри цикла по времени. Подберите подходящие единицы измерения для времени и расстояния.  
 ### Математическая модель  
 
-$$x = r_1 \cos(\omega_1 t) - r_2 \cos(\omega_2 t) \tag{3}$$  
-$$y = r_1 \sin(\omega_1 t) - r_2 \sin(\omega_2 t) \tag{4}$$  
-$$\omega_1 = \frac{2\pi}{T_1} \tag{5}$$  
-$$\omega_2 = \frac{2\pi}{T_2} \tag{6}$$  
+```math
+\begin{aligned}
+x &= r_1 \cos(\omega_1 t) - r_2 \cos(\omega_2 t) \qquad (3) \\
+y &= r_1 \sin(\omega_1 t) - r_2 \sin(\omega_2 t) \qquad (4) \\
+\omega_1 &= \frac{2\pi}{T_1} \qquad (5) \\
+\omega_2 &= \frac{2\pi}{T_2} \qquad (6)
+\end{aligned}
+```
+
 ### Список идентификаторов  
 | Имя  | Тип | Смысл |
 | --- | --- | --- |
