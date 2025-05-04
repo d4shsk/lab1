@@ -334,3 +334,93 @@ int main() {
 ### Результат выполненной работы  
 <img src="imgs/2-4.jpg">  
 
+## 3.1  
+### Задача  
+Для некоторого числового вектора X, введённого с клавиатуры, вычислить значения вектора Y.  
+### Математическая модель  
+$$Y = X * X \quad (y_i = x_i \cdot x_i)$$  
+### Список идентификаторов  
+| Имя  | Тип | Смысл |
+| --- | --- | --- |
+| y  | int  |  число |
+| size  | int  |  размерность массива |
+| X  | int[]  |  массив X |  
+| i  | int  |  число для перебора элементов массива |  
+  
+### Код программы  
+```C
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	int y;
+	printf("3.1 \n");
+	int size;
+	printf("Input size: ");
+	scanf("%d", &size);
+	while (getchar() != '\n');
+	int X[size];
+	printf("Input X: ");
+	for (int i = 0; i < size; i++) {
+		scanf("%d", &X[i]);
+		while (getchar() != '\n');
+	}
+	printf("array Y: ");
+	for (int i = 0; i < size; i++) {
+		y = X[i] * X[i];
+		printf("%d \t", y);
+	}
+	printf("\n");
+}
+```
+### Результат выполненной работы  
+<img src="imgs/3-1.jpg">  
+
+## 3.2  
+### Задача  
+Для некоторого числового массива X, введённого с клавиатуры поэлементно, изменить порядок элементов на обратный и распечатать
+результат на экране.  
+### Математическая модель  
+temp = X[i];
+X[i] = X[size - 1 - i];
+X[size - 1 - i] = temp;
+### Список идентификаторов  
+| Имя  | Тип | Смысл |
+| --- | --- | --- |
+| size  | int  |  размерность массива |
+| X  | int[]  |  массив X |  
+| temp  | int  |  временная переменная |  
+  
+### Код программы  
+```C
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	printf("3.2 \n");
+	int size;
+	printf("Input size: ");
+	scanf("%d", &size);
+	while (getchar() != '\n');
+	int X[size];
+	printf("Input X: ");
+	for (int i = 0; i < size; i++) {
+		scanf("%d", &X[i]);
+		while (getchar() != '\n');
+	}
+	for (int i = 0; i < size / 2; i++) {
+		int temp = X[i];
+		X[i] = X[size - 1 - i];
+		X[size - 1 - i] = temp;
+	}
+	printf("Reversed array: ");
+	for (int i = 0; i < size; i++) {
+		printf("%d ", X[i]);
+	}
+	printf("\n");
+	return 0;
+}
+```  
+### Результат выполненной работы  
+<img src="imgs/3-2.jpg">
+
