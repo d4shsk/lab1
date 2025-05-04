@@ -166,3 +166,53 @@ int main() {
 ```  
 Результат выполненной работы:  
 <img src="imgs/2-1.jpg">
+## 2.2  
+Задача: Вычислить определённый интеграл от заданной функции методом трапеций. Функция f(x) может быть выбрана и самостоятельно. Результат интегрирования сравнить с вычисленным вручную и убедиться в корректности результата.  
+Математическая модель:  
+$$\int\limits_{a}^{b} f(x) \,dx = \int\limits_{a}^{b} e^{x+2} dx$$  
+Список идентификаторов:  
+| Имя  | Тип | Смысл |
+| --- | --- | --- |
+| a  | double  |  предел интегрирования |
+| b  | double  |  предел интегрирования |
+| n  | int  |  количество трапеций |  
+| integral  | double  |  вычисленное значение |  
+| exact  | double  |  значение для проверки |  
+| h  | double  |  высота трапеции |  
+| sum  | double  |  сумма |  
+  
+Код программы:  
+```C
+#include <stdio.h>
+#include <math.h>
+
+double f(double x) {
+	return exp(x);
+}
+double trapezoidal_integral(double a, double b, int n) {
+	double h = (b - a) / n;
+	double sum = (f(a) + f(b)) / 2.0;
+
+	for (int i = 1; i < n; i++) {
+		double x = a + i * h;
+		sum += f(x);
+	}
+
+	return sum * h;
+}
+
+int main() {
+	printf("2.2 \n");
+	double a = 0.0;
+	double b = 1.0;
+	int n = 1000; // количество трапеций 
+
+	double integral = trapezoidal_integral(a, b, n);
+	double exact = exp(b) - exp(a);
+
+	printf("Calculated integral: %.8f\n", integral);
+	printf("Analyzed integral : %.8f\n", exact);
+}
+```
+Результат выполненной работы:  
+<img src="imgs/2-2.jpg">
