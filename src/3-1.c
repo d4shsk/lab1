@@ -17,6 +17,7 @@ int main() {
 	printf("array Y: ");
 	for (int i = 0; i < size; i++) {
 		y = X[i] * X[i];
-		printf("y: %d \t", y);
+		printf("%d \t", y);
 	}
+	printf("\n");
 }
