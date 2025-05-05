@@ -34,6 +34,7 @@ int main() {
 
 	sum = num1 + num2;
 	printf("Sum = %d\n", sum);
+	return 0;
 }
 ```
 ### Результат выполненной работы  
@@ -67,6 +68,7 @@ int main() {
 	u = (1 + pow(sin(x + y), 2)) / (2 + fabs(x - (2 * pow(x, 2)) / (1 + fabs(sin(x + y)))));
 
 	printf("u(%.2f, %.2f) = %.6f\n", x, y, u);
+	return 0;
 }
 ```
 ### Результат выполненной работы  
@@ -116,6 +118,7 @@ int main() {
 	printf("2. %lf \n", calculate_h(x, a, b, c));
 	a = 0.27, b = 3.9, c = 2.8, x = 1.8;
 	printf("3. %lf \n", calculate_h(x, a, b, c));
+	return 0;
 }
 ```  
 ### Результат выполненной работы  
@@ -178,6 +181,7 @@ int main() {
 		double y = r1 * sin(w1 * t) - r2 * sin(w2 * t);
 		printf("Time: %.2f\t X:%.6f\t Y:%.6f\n", t, x, y);
 	}
+	return 0;
 }
 ```  
 ### Результат выполненной работы:  
@@ -230,6 +234,7 @@ int main() {
 
 	printf("Calculated integral: %.8f\n", integral);
 	printf("Analyzed integral : %.8f\n", exact);
+	return 0;
 }
 ```
 ### Результат выполненной работы:  
@@ -284,6 +289,7 @@ int main() {
 		p2 = current;
 	}
 	printf("\n");
+	return 0;
 }
 ```
 ### Результат выполненной работы  
@@ -331,6 +337,7 @@ int main() {
 			break;
 		}
 	} while (1);
+	return 0;
 }
 ```
 ### Результат выполненной работы  
@@ -373,6 +380,7 @@ int main() {
 		printf("%d \t", y);
 	}
 	printf("\n");
+	return 0;
 }
 ```
 ### Результат выполненной работы  
